@@ -1,0 +1,51 @@
+.footer {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    background-image: url("../images/leaves.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+.footer__tel {
+    font-family: inherit;
+    display: block;
+    color: $primary-color;
+    margin-bottom: 15px;
+}
+
+.footer__address {
+    font-family: inherit;
+    margin-bottom: 66px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+}
+
+.icon__facebook,
+.icon__instagram,
+.icon__twitter {
+    fill: $primary-color;
+    width: 55px;
+}
+
+.icon__facebook:hover,
+.icon__facebook:focus,
+.icon__instagram:hover,
+.icon__instagram:focus,
+.icon__twitter:hover,
+.icon__twitter:focus {
+    fill: $accent-color;
+    scale: 1.1;
+}
+
+.footer__item:not(:last-child) {
+    margin-right: 30px;
+}

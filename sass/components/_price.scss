@@ -1,0 +1,95 @@
+.price {
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    @media screen and (max-width: 1440px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1440px) {
+        text-align: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.price__wrapper {
+    @media screen and (min-width: 1439px) {
+        display: flex;
+    }
+
+}
+
+.price__wrapp {
+    @media screen and (min-width: 1440px) {
+        margin-left: 142px;
+    }
+}
+
+.price__img {
+    @media screen and (max-width: 1439px) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 280px;
+        margin-bottom: 30px;
+    }
+}
+
+.price__title {
+    @media screen and (min-width: 1440px) {
+        margin-top: 65px;
+    }
+}
+
+.price__paragraph {
+    font-family: inherit;
+    font-weight: 700;
+    margin-bottom: 45px;
+
+    @media screen and (max-width: 1439px) {
+        margin-bottom: 25px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: 550px;
+    }
+}
+
+.price__text {
+    font-family: inherit;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        margin-right: 13px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+
+    }
+}
+
+.price__list {
+    margin-bottom: 56px;
+
+    @media screen and (max-width: 1439px) {
+        margin-bottom: 30px;
+    }
+}
+
+.price__item {
+    margin-bottom: 16px;
+}
+
+
+.price__button {
+    display: inline-block;
+    padding: 18px 131px;
+
+    @media screen and (max-width: 768px) {
+        padding: 17px 71px;
+    }
+}

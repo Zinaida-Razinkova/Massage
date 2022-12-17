@@ -1,0 +1,94 @@
+.hero {
+    text-align: center;
+
+    @media screen and (min-width: 769px) {
+        padding-top: 320px;
+        padding-bottom: 160px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 45px;
+        padding-bottom: 25px;
+    }
+}
+
+.hero__overlay {
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, rgb(129, 99, 125, 0.2), rgb(81, 66, 79, 0.2)), url("../images/BG@1x.jpg");
+    background-color: $accent-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 320px) {
+        background-image: linear-gradient(to right, rgb(129, 99, 125, 0.2), rgb(81, 66, 79, 0.2)), url("../images/BG-mobile@1x.jpg");
+    }
+
+    @media screen and (min-width: 769px) {
+        max-width: 1920px;
+    }
+}
+
+
+@media screen and (min-device-pixel-ratio: 2),
+screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (-o-min-device-pixel-ratio: 2/1),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero__overlay {
+        background-image: url("../images/BG@2x.jpg");
+
+        @media screen and (max-width: 320px) {
+            background-image: linear-gradient(to right, rgb(129, 99, 125, 0.2), rgb(81, 66, 79, 0.2)), url("../images/BG-mobile@2x.jpg");
+        }
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 3),
+screen and (-webkit-min-device-pixel-ratio: 3),
+screen and (-o-min-device-pixel-ratio: 3/1),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero__overlay {
+        background-image: url("../images/BG@3x.jpg");
+
+        @media screen and (max-width: 320px) {
+            background-image: linear-gradient(to right, rgb(129, 99, 125, 0.2), rgb(81, 66, 79, 0.2)), url("../images/BG-mobile@3x.jpg");
+        }
+    }
+}
+
+.hero__title {
+    font-family: $accent-font;
+    font-size: 60px;
+    line-height: 1.1;
+    color: $secondary-color;
+
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+    }
+}
+
+.hero__text {
+    font-family: inherit;
+    font-weight: 700;
+    color: $secondary-color;
+    margin-top: 300px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 25px;
+    }
+}
+
+.hero__button {
+    margin-top: 45px;
+    padding: 18px 134px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 159px;
+        margin-bottom: 20px;
+        padding: 14px 72px;
+    }
+}

@@ -1,0 +1,85 @@
+.order {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    background-image: url("../images/mandala.svg");
+    background-color: $primary-color;
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+.order__form {
+    margin-bottom: 65px;
+
+    @media screen and (max-width: 1919px) {
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+.input {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $secondary-color;
+}
+
+.form__input {
+    width: 100%;
+    min-height: 57px;
+    border: none;
+
+    &:not(:last-child) {
+        margin-bottom: 45px;
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 25px;
+        }
+    }
+
+}
+
+.form__input:hover,
+.form__input:focus {
+    border: 2px solid $accent-color;
+}
+
+.form__input._error {
+    border: 3px solid #ff0000;
+}
+
+.form__input:focus::placeholder {
+    opacity: 0;
+}
+
+.form__input::placeholder,
+.modal__input::placeholder {
+    font-family: inherit;
+    color: #B1AEB4;
+}
+
+
+
+.order__button {
+    border: 1px solid $secondary-color;
+    padding: 18px 136px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+        padding: 17px 74px;
+    }
+}
+
+.order__status {
+    font-family: inherit;
+    color: $secondary-color;
+    margin-bottom: 20px;
+}

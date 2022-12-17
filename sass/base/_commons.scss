@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0em;
+    line-height: 1.15;
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1790px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 80px;
+
+    @media screen and (max-width: 1789px) {
+        max-width: 1440px;
+    }
+
+    @media screen and (max-width: 1439px) {
+        max-width: 1024px;
+        padding: 0 40px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        max-width: 768px;
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: none;
+    }
+
+}
+
+.title {
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: inherit;
+    font-size: 40px;
+    line-height: 1.1;
+    color: $secondary-color;
+    margin-bottom: 45px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+}
+
+.title_accent {
+    color: $primary-color;
+}

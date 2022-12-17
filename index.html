@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.7.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__wrapp">
+            <nav class="header__nav">
+                <a href="./index.html"><img class="logo__mobile" src="./images/Logo.png" alt="Логотип" width="140"></a>
+                <div class="header__container" data-menu id="header-container">
+                    <ul class="header__list">
+                        <li class="header__item"><a class="header__link" href="#">Головна</a></li>
+                        <li class="header__item"><a class="header__link" href="#services">Види масажу</a></li>
+                        <li class="header__item"><a class="header__link" href="#about">Про мене</a></li>
+                    </ul>
+                    <a href="./index.html"><img class="logo__decktop" src="./images/Logo.png" alt="Логотип"
+                            width="160"></a>
+                    <ul class="header__list">
+                        <li class="header__item"><a class="header__link" href="#price">Ціни</a></li>
+                        <li class="header__item"><a class="header__link" href="#order">Записатися</a></li>
+                        <li class="header__item"><a class="header__link" href="#contacts">Контакти</a></li>
+
+                    </ul>
+
+                    <ul class="header__social">
+                        <li class="header__icon"><a href="#" aria-label="Посилання на Фейсбук">
+                                <svg class="icon__facebook" width="55" height="55">
+                                    <use href="./images/sprite.svg#facebook"></use>
+                                </svg>
+                            </a></li>
+                        <li class="header__icon"><a href="#" aria-label="Посилання на Инстаграм">
+                                <svg class="icon__instagram" width="55" height="55">
+                                    <use href="./images/sprite.svg#instagram"></use>
+                                </svg>
+                            </a></li>
+                        <li class="header__icon"><a href="#" aria-label="Посилання на Твиттер">
+                                <svg class="icon__twitter" width="55" height="55">
+                                    <use href="./images/sprite.svg#twitter"></use>
+                                </svg>
+                            </a></li>
+                    </ul>
+                </div>
+            </nav>
+            <button class="header__menu" aria-controls="header-container" aria-expanded="false" type="button"
+                data-menu-button>
+                <svg width="22" height="22" aria-label="Перемикач мобільного меню">
+                    <use class="header__menu-close" href="./images/sprite.svg#burgerclose"></use>
+                    <use class="header__menu-burger" href="./images/sprite.svg#burgermenu"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero hero__overlay">
+            <div class="container">
+                <h1 class="hero__title">ЗАДОВОЛЕННЯ ВІД МАСАЖУ</h1>
+                <p class="hero__text">Вся наша краса йде зсередини. Коли душа, розум і тіло перебувають у гармонії,
+                    тільки <br> тоді ми стаємо по-справжньому гарними.</p>
+                <button data-action="modal-open" class="button button-primary hero__button">ЗАПИСАТИСЯ</button>
+            </div>
+        </section>
+        <div class="backdrop is-hidden">
+            <div class="modal">
+                <span class="modal__close" data-action="modal-close">X</span>
+                <h2 class="modal__title">ЗАПИСАТИСЯ НА МАСАЖ</h2>
+                <form id="modal-form" class="modal__form" action="https://formspree.io/f/xzbyvrvz" method="POST">
+                    <input class="input modal__input" type="text" name="name" placeholder="ВАШЕ ІМ'Я" required>
+                    <input class="input modal__input" type="text" name="phone" placeholder="+38 (___) __-__-___"
+                        pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
+                        title="Номер телефону має складатися з 11-12 цифр і може містити цифри, пробіли, тире, пузаті дужки та може починатися з +"
+                        required>
+                    <input class="input modal__input" type="text" name="massage" placeholder="ВИД МАСАЖУ">
+                    <input class="input modal__input" type="text" name="date" placeholder="ДАТА І ЧАС">
+                    <button class="button button-primary modal__button" type="submit"
+                        id="modal-button">ВІДПРАВИТИ</button>
+                    <p id="modal-status" class="modal__status"></p>
+                </form>
+            </div>
+        </div>
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="services__title title title_accent">ВИДИ МАСАЖУ</h2>
+                <div class="services__wrapper">
+                    <article class="services__article">
+                        <picture>
+                            <source srcset="
+                                ./images/Foto1@1x.webp 1x, 
+                                ./images/Foto1@2x.webp 2x, 
+                                ./images/Foto1@3x.webp 3x" type="image/webp">
+
+                            <source srcset="
+                                ./images/Foto1@1x.jpg 1x, 
+                                ./images/Foto1@2x.jpg 2x, 
+                                ./images/Foto1@3x.jpg 3x" type="image/webp">
+
+                            <img class="services__img" src="./images/Foto1@1x.jpg" alt="Масаж камінням" width="520">
+                        </picture>
+
+                        <h3 class="services__text">СТОУН МАСАЖ</h3>
+                        <p class="services__paragraph">Зарядіться теплом вулканічного каміння під час <br> стоун-масажу.
+                        </p>
+                    </article>
+                    <article class="services__article">
+                        <picture>
+                            <source srcset="
+                                    ./images/Foto2@1x.webp 1x, 
+                                    ./images/Foto2@2x.webp 2x, 
+                                    ./images/Foto2@3x.webp 3x" type="image/webp">
+
+                            <source srcset="
+                                    ./images/Foto2@1x.jpg 1x, 
+                                    ./images/Foto2@2x.jpg 2x, 
+                                    ./images/Foto2@3x.jpg 3x" type="image/webp">
+
+                            <img class="services__img" src="./images/Foto2@1x.jpg" alt="Масаж оліею" width="520">
+                        </picture>
+
+                        <h3 class="services__text">МАСЛЯНИЙ МАСАЖ</h3>
+                        <p class="services__paragraph">Пориньте в блаженство і безтурботність за <br> допомогою
+                            ойл-масажу.</p>
+                    </article>
+                    <article class="services__article">
+                        <picture>
+                            <source srcset="
+                                    ./images/Foto3@1x.webp 1x, 
+                                    ./images/Foto3@2x.webp 2x, 
+                                    ./images/Foto3@3x.webp 3x" type="image/webp">
+                            <source srcset="
+                                    ./images/Foto3@1x.jpg 1x, 
+                                    ./images/Foto3@2x.jpg 2x, 
+                                    ./images/Foto3@3x.jpg 3x" type="image/webp">
+
+                            <img class="services__img" src="./images/Foto3@1x.jpg" alt="Масаж ніг" width="520">
+                        </picture>
+
+                        <h3 class="services__text">ФУТ МАСАЖ</h3>
+                        <p class="services__paragraph">Призначений для глибокої дії на стопу, повертає <br> силу та
+                            пружність.</p>
+                    </article>
+                </div>
+                <button class="button button-primary services__button" href="#">ВСІ ВИДИ МАСАЖУ</button>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about__wrapper">
+                    <div>
+                        <h2 class="about__title title ">ПРО МЕНЕ</h2>
+                        <p class="about__paragraph">Приходьте відпочивати, розслаблятися, перезавантажуватись.⠀Будьте
+                            уважні до себе, даруйте собі більше любові та турботи.</p>
+                        <ul class="advantage">
+                            <li class="advantage__list">
+                                <div>
+                                    <h4 class="advantage__title">Кваліфікований масажист</h4>
+                                    <p class="advantage__paragraph">У мене медична освіта, курси масажу, курси
+                                        підвищення
+                                        кваліфікації, про що свідчать сертифікати та дипломи.</p>
+                                </div>
+                            </li>
+                            <li class="advantage__list">
+                                <div>
+                                    <h4 class="advantage__title">Більше 5 років досвіду</h4>
+                                    <p class="advantage__paragraph">Масажем займаюся давно, багато постійних клієнтів,
+                                        які
+                                        із задоволенням відвідують мій кабінет.</p>
+                                </div>
+                            </li>
+                            <li class="advantage__list">
+                                <div>
+                                    <h4 class="advantage__title">Найкраща косметика</h4>
+                                    <p class="advantage__paragraph">Під час відпустки та подорожей я купую ароматні та
+                                        базові олії, які використовую у своїй роботі.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="about__button button button-secondary">ДІЗНАТИСЯ БІЛЬШЕ</button>
+                    </div>
+
+                    <picture>
+                        <source srcset="
+                                                ./images/Portret@1x.webp 1x, 
+                                                ./images/Portret@2x.webp 2x, 
+                                                ./images/Portret@3x.webp 3x" type="image/webp">
+                        <source srcset="
+                                                ./images/Portret@1x.jpg 1x, 
+                                                ./images/Portret@2x.jpg 2x, 
+                                                ./images/Portret@3x.jpg 3x" type="image/webp">
+
+                        <img class="about__img" src="./images/Portret@1x.jpg" alt="Портрет" width="950">
+                    </picture>
+
+                </div>
+            </div>
+        </section>
+        <section id="price" class="price">
+            <div class="container">
+                <div class="price__wrapper">
+                    <picture>
+                        <source srcset="
+                                ./images/Oil@1x.webp 1x, 
+                                ./images/Oil@2x.webp 2x, 
+                                ./images/Oil@3x.webp 3x" type="image/webp">
+
+                        <source srcset="
+                                ./images/Oil@1x.jpg 1x, 
+                                ./images/Oil@2x.jpg 2x, 
+                                ./images/Oil@3x.jpg 3x" type="image/webp">
+
+                        <img class="price__img" src="./images/Oil@1x.png" alt="Олія для масажу" width="700">
+                    </picture>
+                    <div class="price__wrapp">
+                        <h2 class="price__title title title_accent">СКІЛЬКИ КОШТУЄ МАСАЖ</h2>
+                        <p class="price__paragraph">Масаж спрямований на відновлення балансу
+                            та створення гармонії тіла та душі.
+                            З сучасним способом життя масаж -
+                            це не розкіш, а потреба!</p>
+                        <ul class="price__list">
+                            <li class="price__item">
+                                <p class="price__text">Класичний масаж - 500 грн</p>
+                            </li>
+                            <li class="price__item">
+                                <p class="price__text">Масляний масаж - 700 грн</p>
+                            </li>
+                            <li class="price__item">
+                                <p class="price__text">Фут-масаж - 600 грн</p>
+                            </li>
+                            <li class="price__item">
+                                <p class="price__text">Стоун-масаж - 700 грн</p>
+                            </li>
+                            <li class="price__item">
+                                <p class="price__text">Тайский йога-масаж - 700 грн</p>
+                            </li>
+                            <li class="price__item">
+                                <p class="price__text">Масаж обличчя - 400 грн</p>
+                            </li>
+                        </ul>
+                        <button class="button button-primary price__button" href="#">ДОКЛАДНІШЕ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="order" class="order">
+            <div class="container">
+                <h2 class="order__title title">ЗАПИСАТИСЯ НА МАСАЖ</h2>
+                <form id="order-form" class="order__form form " action="https://formspree.io/f/mrgvzepn" method="POST">
+                    <input class="input form__input " type="text" name="name" placeholder="ВАШЕ ІМ'Я" required>
+                    <input class="input form__input " type="text" name="phone" placeholder="+38 (___) __-__-___"
+                        pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
+                        title="Номер телефону має складатися з 11-12 цифр і може містити цифри, пробіли, тире, пузаті дужки та може починатися з +"
+                        required>
+                    <input class="input form__input" type="text" name="massage" placeholder="ВИД МАСАЖУ">
+                    <input class="input form__input" type="text" name="date" placeholder="ДАТА І ЧАС">
+                    <button class="order__button button button-primary " type="submit">ВІДПРАВИТИ</button>
+                    <p id="order-status" class="order__status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer id="contacts" class="footer">
+        <div class="container">
+            <h2 class="footer__title title title_accent">КОНТАКТИ</h2>
+            <a href="#" class="scrollup" title="To the top"></a>
+            <a class="footer__tel" href="tel:+380995566777">+38 099 55 66 777</a>
+            <address class="footer__address">м.Харків, вул.Щастя, 25, 1 поверх</address>
+            <ul class="footer__social">
+                <li class="footer__item"><a href="#" aria-label="Посилання на Фейсбук">
+                        <svg class="icon__facebook" width="55" height="55">
+                            <use href="./images/sprite.svg#facebook"></use>
+                        </svg>
+                    </a></li>
+                <li class="footer__item"><a href="#" aria-label="Посилання на Инстаграм">
+                        <svg class="icon__instagram" width="55" height="55">
+                            <use href="./images/sprite.svg#instagram"></use>
+                        </svg>
+                    </a></li>
+                <li class="footer__item"><a href="#" aria-label="Посилання на Твиттер">
+                        <svg class="icon__twitter" width="55" height="55">
+                            <use href="./images/sprite.svg#twitter"></use>
+                        </svg>
+                    </a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./js/scrollup.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/modal-form.js"></script> -->
+    <script src="./js/order-form.js"></script>
+    <script src="./js/mobile menu.js"></script>
+</body>
+
+</html>

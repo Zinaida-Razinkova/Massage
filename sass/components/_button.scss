@@ -1,0 +1,28 @@
+.button {
+    min-width: 280px;
+    max-width: 500px;
+    font-family: inherit;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+.button-secondary {
+    background-color: $secondary-color;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+}
+
+.button.button-primary:hover,
+.button.button-primary:focus,
+.button.button-secondary:hover,
+.button.button-secondary:focus {
+    background-color: $accent-color;
+    color: $secondary-color;
+    scale: 1.02;
+}
