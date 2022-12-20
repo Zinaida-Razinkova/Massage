@@ -128,7 +128,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1;
+    z-index: 10;
     width: 100%;
     display: none;
     background-color: #F6F1E8;
@@ -164,9 +164,8 @@
 
 .button {
   min-width: 280px;
-  max-width: 500px;
   font-family: inherit;
-  border: none;
+  border-radius: 10px;
   text-align: center;
   cursor: pointer;
 }
@@ -284,7 +283,62 @@
   }
 }
 
-.backdrop {
+.hero__modal-title {
+  font-family: "Forum", cursive;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .hero__modal-title {
+    font-size: 20px;
+  }
+}
+
+.hero__modal-input {
+  min-width: 600px;
+  min-height: 50px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  border: 1px solid #81637D;
+}
+@media screen and (max-width: 768px) {
+  .hero__modal-input {
+    min-width: 200px;
+    min-height: 30px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+}
+
+.hero__modal-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.hero__modal-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.hero__modal-input:focus::placeholder {
+  opacity: 0;
+}
+
+.hero__modal-button {
+  padding: 18px 136px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  .hero__modal-button {
+    padding: 14px 72px;
+  }
+}
+
+.hero__modal_status {
+  font-family: inherit;
+}
+
+.hero__backdrop,
+.about__backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -301,142 +355,125 @@
   pointer-events: none;
 }
 
-body.show-modal .backdrop {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
-}
-
-body.show-modal .modal {
-  transform: scale(1);
-}
-
-.modal {
+.hero__modal,
+.about__modal {
   position: absolute;
   max-width: 700px;
+  height: auto;
   background-color: #F6F1E8;
   padding: 30px;
   text-align: center;
   transform: scale(1.05);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 15px;
 }
 @media screen and (max-width: 768px) {
-  .modal {
+  .hero__modal,
+.about__modal {
     min-width: 250px;
     padding: 20px 10px;
+    border-radius: 10px;
   }
 }
 
-.modal__close {
-  display: block;
+body.modal-show {
+  overflow: hidden;
+}
+
+.about__modal {
+  max-width: 80%;
+  background-image: url("../images/leaves.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  top: 10%;
+}
+
+body.hero__modal-show .hero__backdrop,
+body.about__modal-show .about__backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+body.hero__modal-show .hero__modal,
+body.about__modal-show .about__modal {
+  transform: scale(1);
+}
+
+.hero__close,
+.modal-about_close {
   text-align: right;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-  .modal__close {
+  .hero__close,
+.modal-about_close {
     margin-bottom: 10px;
   }
 }
 
-.modal__title {
-  font-family: "Forum", cursive;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.modal__input {
-  min-width: 600px;
-  min-height: 50px;
-  margin-bottom: 5px;
-  margin-top: 20px;
-  border: 1px solid #81637D;
-}
-@media screen and (max-width: 768px) {
-  .modal__input {
-    min-width: 200px;
-    min-height: 30px;
-    margin-bottom: 5px;
-    margin-top: 10px;
-  }
-}
-
-.modal__input:focus::-moz-placeholder {
-  opacity: 0;
-}
-
-.modal__input:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.modal__input:focus::placeholder {
-  opacity: 0;
-}
-
-.modal__button {
-  padding: 18px 136px;
-  margin-bottom: 15px;
-  margin-top: 15px;
+.hero__close::before,
+.modal-about_close::before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #81637D;
+  background-image: url("../../images/icon-close.svg");
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @media screen and (max-width: 768px) {
-  .modal__button {
-    padding: 14px 72px;
+  .hero__close::before,
+.modal-about_close::before {
+    width: 20px;
+    height: 20px;
+    background-size: 10px;
   }
-}
-
-.modal__status {
-  font-family: inherit;
 }
 
 .services {
   text-align: center;
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding: 45px 0;
 }
 @media screen and (min-width: 1025px) {
   .services {
-    padding-top: 85px;
-    padding-bottom: 85px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .services__wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
+    padding: 85px 0;
   }
 }
 
 .services__article {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding: 20px;
   background-color: #81637D;
+  border-radius: 15px;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 768px) {
   .services__article {
-    padding-left: 27px;
-    padding-right: 27px;
-    padding-bottom: 67px;
+    flex-direction: column;
+    width: 75%;
   }
-  .services__article:not(:last-child) {
-    margin-right: 19px;
-  }
-}
-.services__article:hover {
-  background-color: #81637D;
-  scale: 1.02;
 }
 
 .services__img {
-  position: relative;
-  top: -20px;
-  margin: auto;
+  border-radius: 15px;
 }
-@media screen and (min-width: 1025px) {
-  .services__img {
-    top: -28px;
+
+.services__wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .services__wrapper {
+    padding: 20px;
   }
 }
 
@@ -448,10 +485,9 @@ body.show-modal .modal {
   color: #F6F1E8;
   margin: 10px auto 0 auto;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 1440px) {
   .services__text {
-    font-size: 30px;
-    margin-top: 42px;
+    font-size: 18px;
   }
 }
 .services__text::after {
@@ -481,15 +517,30 @@ body.show-modal .modal {
     margin-top: 23px;
   }
 }
-
-.services__button {
-  display: inline-block;
-  padding: 17px 49px;
-}
-@media screen and (min-width: 1025px) {
-  .services__button {
-    padding: 18px 106px;
+@media screen and (max-width: 1440px) {
+  .services__paragraph {
+    font-size: 16px;
   }
+}
+
+.services__swiper-button-prev,
+.services__swiper-button-next {
+  color: #81637D;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 25px;
+}
+@media screen and (max-width: 1024px) {
+  .swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #81637D;
 }
 
 .about {
@@ -649,6 +700,26 @@ body.show-modal .modal {
   }
 }
 
+.modal-about_title {
+  font-family: "Forum", cursive;
+  font-size: 44px;
+  color: #81637D;
+  margin-bottom: 30px;
+}
+
+.modal-about_text {
+  font-family: inherit;
+  font-size: 22px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .modal-about_text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
 .price {
   padding-top: 45px;
   padding-bottom: 45px;
@@ -737,16 +808,6 @@ body.show-modal .modal {
   margin-bottom: 16px;
 }
 
-.price__button {
-  display: inline-block;
-  padding: 18px 131px;
-}
-@media screen and (max-width: 768px) {
-  .price__button {
-    padding: 17px 71px;
-  }
-}
-
 .order {
   padding-top: 85px;
   padding-bottom: 85px;
@@ -778,6 +839,7 @@ body.show-modal .modal {
   margin-left: auto;
   margin-right: auto;
   background-color: #F6F1E8;
+  border-radius: 10px;
 }
 
 .form__input {
@@ -905,7 +967,7 @@ body.show-modal .modal {
   position: fixed;
   bottom: 100px;
   right: 200px;
-  z-index: 0;
+  z-index: 2;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -937,6 +999,11 @@ body.show-modal .modal {
   margin: 0;
   border: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {

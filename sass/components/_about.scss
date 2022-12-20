@@ -153,3 +153,23 @@
         align-items: center;
     }
 }
+
+
+.modal-about_title {
+    font-family: $accent-font;
+    font-size: 44px;
+    color: $primary-color;
+    margin-bottom: 30px;
+}
+
+.modal-about_text {
+    font-family: inherit;
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.7.0/modern-normalize.min.css">
@@ -66,89 +67,123 @@
                 <h1 class="hero__title">ЗАДОВОЛЕННЯ ВІД МАСАЖУ</h1>
                 <p class="hero__text">Вся наша краса йде зсередини. Коли душа, розум і тіло перебувають у гармонії,
                     тільки <br> тоді ми стаємо по-справжньому гарними.</p>
-                <button data-action="modal-open" class="button button-primary hero__button">ЗАПИСАТИСЯ</button>
+                <button class="button button-primary hero__button">ЗАПИСАТИСЯ</button>
             </div>
         </section>
-        <div class="backdrop is-hidden">
-            <div class="modal">
-                <span class="modal__close" data-action="modal-close">X</span>
-                <h2 class="modal__title">ЗАПИСАТИСЯ НА МАСАЖ</h2>
-                <form id="modal-form" class="modal__form" action="https://formspree.io/f/xzbyvrvz" method="POST">
-                    <input class="input modal__input" type="text" name="name" placeholder="ВАШЕ ІМ'Я" required>
-                    <input class="input modal__input" type="text" name="phone" placeholder="+38 (___) __-__-___"
+        <div class="hero__backdrop">
+            <div class="hero__modal">
+                <div class="hero__close"></div>
+                <h2 class="hero__modal-title">ЗАПИСАТИСЯ НА МАСАЖ</h2>
+                <form id="modal-form" class="hero__modal-form" action="https://formspree.io/f/xzbyvrvz" method="POST">
+                    <input class="hero__modal-input input" type="text" name="name" placeholder="ВАШЕ ІМ'Я" required>
+                    <input class="hero__modal-input input" type="text" name="phone" placeholder="+38 (___) __-__-___"
                         pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
                         title="Номер телефону має складатися з 11-12 цифр і може містити цифри, пробіли, тире, пузаті дужки та може починатися з +"
                         required>
-                    <input class="input modal__input" type="text" name="massage" placeholder="ВИД МАСАЖУ">
-                    <input class="input modal__input" type="text" name="date" placeholder="ДАТА І ЧАС">
-                    <button class="button button-primary modal__button" type="submit"
+                    <input class="hero__modal-input input" type="text" name="massage" placeholder="ВИД МАСАЖУ">
+                    <input class="hero__modal-input input" type="text" name="date" placeholder="ДАТА І ЧАС">
+                    <button class="hero__modal-button button button-primary " type="submit"
                         id="modal-button">ВІДПРАВИТИ</button>
-                    <p id="modal-status" class="modal__status"></p>
+                    <p id="modal-status" class="hero__modal_status"></p>
                 </form>
             </div>
         </div>
         <section id="services" class="services">
             <div class="container">
                 <h2 class="services__title title title_accent">ВИДИ МАСАЖУ</h2>
-                <div class="services__wrapper">
-                    <article class="services__article">
-                        <picture>
-                            <source srcset="
-                                ./images/Foto1@1x.webp 1x, 
-                                ./images/Foto1@2x.webp 2x, 
-                                ./images/Foto1@3x.webp 3x" type="image/webp">
+                <!-- Slider main container -->
+                <div class="services__swiper swiper-services swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="services__swiper-wrapper  swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="services__swiper-slide swiper-slide">
+                            <article class="services__article">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/Foto3@1x.webp 1x, 
+                                            ./images/Foto3@2x.webp 2x, 
+                                            ./images/Foto3@3x.webp 3x"
+                                        type="image/webp">
 
-                            <source srcset="
-                                ./images/Foto1@1x.jpg 1x, 
-                                ./images/Foto1@2x.jpg 2x, 
-                                ./images/Foto1@3x.jpg 3x" type="image/webp">
+                                    <source
+                                        srcset="
+                                            ./images/Foto3@1x.jpg 1x, 
+                                            ./images/Foto3@2x.jpg 2x, 
+                                            ./images/Foto3@3x.jpg 3x"
+                                        type="image/webp">
 
-                            <img class="services__img" src="./images/Foto1@1x.jpg" alt="Масаж камінням" width="520">
-                        </picture>
+                                    <img class="services__img" src="./images/Foto3@1x.jpg" alt="Масаж ніг"
+                                        width="520">
+                                </picture>
+                                <div class="services__wrapper">
+                                    <h3 class="services__text">ФУТ МАСАЖ</h3>
+                                    <p class="services__paragraph">Призначений для глибокої дії на стопу, повертає силу
+                                        тапружність.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="services__swiper-slide swiper-slide">
+                            <article class="services__article">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/Foto2@1x.webp 1x, 
+                                            ./images/Foto2@2x.webp 2x, 
+                                            ./images/Foto2@3x.webp 3x"
+                                        type="image/webp">
 
-                        <h3 class="services__text">СТОУН МАСАЖ</h3>
-                        <p class="services__paragraph">Зарядіться теплом вулканічного каміння під час <br> стоун-масажу.
-                        </p>
-                    </article>
-                    <article class="services__article">
-                        <picture>
-                            <source srcset="
-                                    ./images/Foto2@1x.webp 1x, 
-                                    ./images/Foto2@2x.webp 2x, 
-                                    ./images/Foto2@3x.webp 3x" type="image/webp">
+                                    <source
+                                        srcset="
+                                            ./images/Foto2@1x.jpg 1x, 
+                                            ./images/Foto2@2x.jpg 2x, 
+                                            ./images/Foto2@3x.jpg 3x"
+                                        type="image/webp">
 
-                            <source srcset="
-                                    ./images/Foto2@1x.jpg 1x, 
-                                    ./images/Foto2@2x.jpg 2x, 
-                                    ./images/Foto2@3x.jpg 3x" type="image/webp">
+                                    <img class="services__img" src="./images/Foto2@1x.jpg" alt="Масаж оліею"
+                                        width="520">
+                                </picture>
+                                <div class="services__wrapper">
+                                    <h3 class="services__text">МАСЛЯНИЙ МАСАЖ</h3>
+                                    <p class="services__paragraph">Пориньте в блаженство і безтурботність за допомогою
+                                        ойл-масажу.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="services__swiper-slide swiper-slide">
+                            <article class="services__article">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/Foto1@1x.webp 1x, 
+                                            ./images/Foto1@2x.webp 2x, 
+                                            ./images/Foto1@3x.webp 3x"
+                                        type="image/webp">
 
-                            <img class="services__img" src="./images/Foto2@1x.jpg" alt="Масаж оліею" width="520">
-                        </picture>
+                                    <source
+                                        srcset="
+                                            ./images/Foto1@1x.jpg 1x, 
+                                            ./images/Foto1@2x.jpg 2x, 
+                                            ./images/Foto1@3x.jpg 3x"
+                                        type="image/webp">
 
-                        <h3 class="services__text">МАСЛЯНИЙ МАСАЖ</h3>
-                        <p class="services__paragraph">Пориньте в блаженство і безтурботність за <br> допомогою
-                            ойл-масажу.</p>
-                    </article>
-                    <article class="services__article">
-                        <picture>
-                            <source srcset="
-                                    ./images/Foto3@1x.webp 1x, 
-                                    ./images/Foto3@2x.webp 2x, 
-                                    ./images/Foto3@3x.webp 3x" type="image/webp">
-                            <source srcset="
-                                    ./images/Foto3@1x.jpg 1x, 
-                                    ./images/Foto3@2x.jpg 2x, 
-                                    ./images/Foto3@3x.jpg 3x" type="image/webp">
+                                    <img class="services__img" src="./images/Foto1@1x.jpg" alt="Масаж камінням"
+                                        width="520">
+                                </picture>
+                                <div class="services__wrapper">
+                                    <h3 class="services__text">СТОУН МАСАЖ</h3>
+                                    <p class="services__paragraph">Зарядіться теплом вулканічного каміння під час
+                                        cтоун-масажу.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="services__swiper-pagination swiper-pagination"></div>
+                    <div class="services__swiper-button-prev swiper-button-prev"></div>
+                    <div class="services__swiper-button-next swiper-button-next"></div>
 
-                            <img class="services__img" src="./images/Foto3@1x.jpg" alt="Масаж ніг" width="520">
-                        </picture>
-
-                        <h3 class="services__text">ФУТ МАСАЖ</h3>
-                        <p class="services__paragraph">Призначений для глибокої дії на стопу, повертає <br> силу та
-                            пружність.</p>
-                    </article>
                 </div>
-                <button class="button button-primary services__button" href="#">ВСІ ВИДИ МАСАЖУ</button>
             </div>
         </section>
         <section id="about" class="about">
@@ -184,17 +219,61 @@
                             </li>
                         </ul>
                         <button class="about__button button button-secondary">ДІЗНАТИСЯ БІЛЬШЕ</button>
+                        <div class="about__backdrop">
+                            <div class="about__modal modal-about">
+                                <div class="modal-about_close"></div>
+                                <h2 class="modal-about_title">Про мене</h2>
+                                <p class="modal-about_text">
+                                    Тілесні дотики під час сеансу масажу за правильно розробленою схемою провокують
+                                    зміни хімії
+                                    мозку, викликаючи такі
+                                    процеси:
+                                    ⠀</p>
+                                <p class="modal-about_text">1.Знижується концентрація у крові гормону кортизолу, який
+                                    бере участь у розвитку стресових
+                                    реакцій. Рівень гормону
+                                    падає до нормального мінімуму, що спостерігається у людини у вечірній час перед
+                                    сном,
+                                    коли вoна найбільш спокійна.</p>
+                                <p class="modal-about_text">2.Зменшується рівень адреналіну, що тримає людину в
+                                    постійній напрузі і призводить до
+                                    панічних атак та тромбозів.</p>
+                                <p class="modal-about_text">3.Спостерігається викид «гормону довіри» окситоцину,
+                                    збільшення якого в лімфі
+                                    відзначається при оргазмі, грудному
+                                    годуванні, ніжних ласках закоханих. Окситоцин має умиротворюючу дію на людину,
+                                    зменшуючи
+                                    аномальні страхи та підвищену
+                                    тривожність.</p>
+                                <p class="modal-about_text">4.Підвищується рівень серотоніну – «гормону гарного
+                                    настрою», який виробляється організмом
+                                    у моменти радості,
+                                    підвищуючи сприйнятливість до негативних переживань та знижується при неврозах.
+                                    ⠀</p>
+                                <p class="modal-about_text">5.Інша група гормонів «задоволення», яка надходить у кров
+                                    при активних видах масажу –
+                                    ендорфіни – природні
+                                    болезаспокійливі речовини, схожі на дію з морфіном і здатні допомогти впоратися з
+                                    пригніченим станом.
+                                    Нормальний рівень ендорфінів дуже важливий при багатьох захворюваннях, що протікають
+                                    на
+                                    фоні депресії або з вираженими
+                                    болючими відчуттями.</p>
+                                <p class="modal-about_text">Дбайте про себе, даруйте задоволення – приходьте на масаж!
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <picture>
                         <source srcset="
-                                                ./images/Portret@1x.webp 1x, 
-                                                ./images/Portret@2x.webp 2x, 
-                                                ./images/Portret@3x.webp 3x" type="image/webp">
+                                                        ./images/Portret@1x.webp 1x, 
+                                                        ./images/Portret@2x.webp 2x, 
+                                                        ./images/Portret@3x.webp 3x" type="image/webp">
                         <source srcset="
-                                                ./images/Portret@1x.jpg 1x, 
-                                                ./images/Portret@2x.jpg 2x, 
-                                                ./images/Portret@3x.jpg 3x" type="image/webp">
+                                                        ./images/Portret@1x.jpg 1x, 
+                                                        ./images/Portret@2x.jpg 2x, 
+                                                        ./images/Portret@3x.jpg 3x" type="image/webp">
 
                         <img class="about__img" src="./images/Portret@1x.jpg" alt="Портрет" width="950">
                     </picture>
@@ -244,7 +323,6 @@
                                 <p class="price__text">Масаж обличчя - 400 грн</p>
                             </li>
                         </ul>
-                        <button class="button button-primary price__button" href="#">ДОКЛАДНІШЕ</button>
                     </div>
                 </div>
             </div>
@@ -292,10 +370,13 @@
         </div>
     </footer>
     <script src="./js/scrollup.js"></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/modal-form.js"></script> -->
+    <script src="./js/about-modal.js"></script>
+    <script src="./js/hero-modal.js"></script>
+    <script src="./js/modal-form.js"></script>
     <script src="./js/order-form.js"></script>
-    <script src="./js/mobile menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
 </body>
 
 </html>

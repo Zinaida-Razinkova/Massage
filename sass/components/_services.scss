@@ -1,53 +1,39 @@
 .services {
     text-align: center;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding: 45px 0;
 
     @media screen and (min-width: 1025px) {
-        padding-top: 85px;
-        padding-bottom: 85px;
-    }
-}
-
-
-.services__wrapper {
-    @media screen and (min-width: 1025px) {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 60px;
+        padding: 85px 0;
     }
 }
 
 .services__article {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 20px;
     background-color: $primary-color;
+    border-radius: 15px;
 
-    @media screen and (min-width: 1025px) {
-        padding-left: 27px;
-        padding-right: 27px;
-        padding-bottom: 67px;
-
-        &:not(:last-child) {
-            margin-right: 19px;
-        }
-    }
-
-    &:hover {
-        background-color: $primary-color;
-        scale: 1.02;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        width: 75%;
     }
 }
 
-.services__img {
-    position: relative;
-    top: -20px;
-    margin: auto;
+.services__img{
+    border-radius: 15px;
+}
 
-    @media screen and (min-width: 1025px) {
-        top: -28px;
+.services__wrapper {
+margin: 0 auto;
+    padding-top: 20px;
+
+    @media screen and (min-width: 768px) {
+        padding: 20px;
     }
 }
 
@@ -59,9 +45,8 @@
     color: $secondary-color;
     margin: 10px auto 0 auto;
 
-    @media screen and (min-width: 1025px) {
-        font-size: 30px;
-        margin-top: 42px;
+    @media screen and (max-width: 1440px) {
+        font-size: 18px;
     }
 
     &::after {
@@ -90,13 +75,29 @@
     @media screen and (min-width: 1025px) {
         margin-top: 23px;
     }
+
+    @media screen and (max-width: 1440px) {
+        font-size: 16px;
+    }
 }
 
-.services__button {
-    display: inline-block;
-    padding: 17px 49px;
+// Swiper
 
-    @media screen and (min-width: 1025px) {
-        padding: 18px 106px;
+.services__swiper-button-prev,
+.services__swiper-button-next {
+    color: $primary-color;
+
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 25px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 20px;
     }
+}
+
+.swiper-pagination-bullet-active {
+    background: $primary-color;
 }

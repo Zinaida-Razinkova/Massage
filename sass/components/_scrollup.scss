@@ -2,13 +2,14 @@
     position: fixed;
     bottom: 100px;
     right: 200px;
-    z-index: 0;
+    z-index: 2;
     width: 40px;
     height: 40px;
     cursor: pointer;
     transform: scale(1);
     background: url("../images/Top.svg") no-repeat;
     background-size: contain;
+
 
     @media screen and (max-width: 768px) {
         bottom: 100px;

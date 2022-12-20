@@ -83,13 +83,3 @@
 .price__item {
     margin-bottom: 16px;
 }
-
-
-.price__button {
-    display: inline-block;
-    padding: 18px 131px;
-
-    @media screen and (max-width: 768px) {
-        padding: 17px 71px;
-    }
-}
