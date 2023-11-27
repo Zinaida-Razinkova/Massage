@@ -314,10 +314,6 @@
   opacity: 0;
 }
 
-.hero__modal-input:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
 .hero__modal-input:focus::placeholder {
   opacity: 0;
 }
@@ -369,7 +365,7 @@
 }
 @media screen and (max-width: 768px) {
   .hero__modal,
-.about__modal {
+  .about__modal {
     min-width: 250px;
     padding: 20px 10px;
     border-radius: 10px;
@@ -408,7 +404,7 @@ body.about__modal-show .about__modal {
 }
 @media screen and (max-width: 768px) {
   .hero__close,
-.modal-about_close {
+  .modal-about_close {
     margin-bottom: 10px;
   }
 }
@@ -428,7 +424,7 @@ body.about__modal-show .about__modal {
 }
 @media screen and (max-width: 768px) {
   .hero__close::before,
-.modal-about_close::before {
+  .modal-about_close::before {
     width: 20px;
     height: 20px;
     background-size: 10px;
@@ -534,7 +530,7 @@ body.about__modal-show .about__modal {
 }
 @media screen and (max-width: 1024px) {
   .swiper-button-next:after,
-.swiper-button-prev:after {
+  .swiper-button-prev:after {
     font-size: 20px;
   }
 }
@@ -869,20 +865,11 @@ body.about__modal-show .about__modal {
   opacity: 0;
 }
 
-.form__input:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
 .form__input:focus::placeholder {
   opacity: 0;
 }
 
 .form__input::-moz-placeholder, .modal__input::-moz-placeholder {
-  font-family: inherit;
-  color: #B1AEB4;
-}
-
-.form__input:-ms-input-placeholder, .modal__input:-ms-input-placeholder {
   font-family: inherit;
   color: #B1AEB4;
 }
