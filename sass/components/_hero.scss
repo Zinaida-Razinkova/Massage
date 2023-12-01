@@ -38,7 +38,7 @@ screen and (-o-min-device-pixel-ratio: 2/1),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .hero__overlay {
-        background-image: url("../images/BG@2x.jpg");
+        background-image: linear-gradient(to right, rgb(129, 99, 125, 0.2), rgb(81, 66, 79, 0.2)), url("../images/BG@2x.jpg");
 
         @media screen and (max-width: 320px) {
             background-image: linear-gradient(to right, rgb(129, 99, 125, 0.2), rgb(81, 66, 79, 0.2)), url("../images/BG-mobile@2x.jpg");
@@ -52,7 +52,7 @@ screen and (-o-min-device-pixel-ratio: 3/1),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .hero__overlay {
-        background-image: url("../images/BG@3x.jpg");
+        background-image: linear-gradient(to right, rgb(129, 99, 125, 0.2), rgb(81, 66, 79, 0.2)), url("../images/BG@3x.jpg");
 
         @media screen and (max-width: 320px) {
             background-image: linear-gradient(to right, rgb(129, 99, 125, 0.2), rgb(81, 66, 79, 0.2)), url("../images/BG-mobile@3x.jpg");
@@ -76,6 +76,7 @@ screen and (min-resolution: 2dppx) {
     font-weight: 700;
     color: $secondary-color;
     margin-top: 300px;
+    margin-bottom: 70px;
 
     @media screen and (max-width: 768px) {
         margin-top: 25px;
@@ -83,54 +84,9 @@ screen and (min-resolution: 2dppx) {
 }
 
 .hero__button {
-    margin-top: 45px;
     padding: 18px 134px;
 
     @media screen and (max-width: 768px) {
-        margin-top: 159px;
-        margin-bottom: 20px;
         padding: 14px 72px;
     }
-}
-
-.hero__modal-title {
-    font-family: $accent-font;
-    font-size: 40px;
-    margin-bottom: 15px;
-    @media screen and (max-width: 768px) {
-            font-size: 20px;
-        }
-}
-
-.hero__modal-input {
-    min-width: 600px;
-    min-height: 50px;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    border: 1px solid $primary-color;
-
-    @media screen and (max-width: 768px) {
-        min-width: 200px;
-        min-height: 30px;
-        margin-bottom: 5px;
-        margin-top: 10px;
-    }
-}
-
-.hero__modal-input:focus::placeholder {
-    opacity: 0;
-}
-
-.hero__modal-button {
-    @media screen and (max-width: 768px) {
-        padding: 14px 72px;
-    }
-
-    padding: 18px 136px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-
-.hero__modal_status {
-    font-family: inherit;
 }

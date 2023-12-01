@@ -163,6 +163,7 @@
 }
 
 .button {
+  display: inline-block;
   min-width: 280px;
   font-family: inherit;
   border-radius: 10px;
@@ -229,7 +230,7 @@
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero__overlay {
-    background-image: url("../images/BG@2x.jpg");
+    background-image: linear-gradient(to right, rgba(129, 99, 125, 0.2), rgba(81, 66, 79, 0.2)), url("../images/BG@2x.jpg");
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 320px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px), screen and (min-resolution: 192dpi) and (max-width: 320px), screen and (min-resolution: 2dppx) and (max-width: 320px) {
@@ -239,7 +240,7 @@
 }
 @media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero__overlay {
-    background-image: url("../images/BG@3x.jpg");
+    background-image: linear-gradient(to right, rgba(129, 99, 125, 0.2), rgba(81, 66, 79, 0.2)), url("../images/BG@3x.jpg");
   }
 }
 @media screen and (min-device-pixel-ratio: 3) and (max-width: 320px), screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 320px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px), screen and (min-resolution: 192dpi) and (max-width: 320px), screen and (min-resolution: 2dppx) and (max-width: 320px) {
@@ -264,6 +265,7 @@
   font-weight: 700;
   color: #F6F1E8;
   margin-top: 300px;
+  margin-bottom: 70px;
 }
 @media screen and (max-width: 768px) {
   .hero__text {
@@ -272,68 +274,14 @@
 }
 
 .hero__button {
-  margin-top: 45px;
   padding: 18px 134px;
 }
 @media screen and (max-width: 768px) {
   .hero__button {
-    margin-top: 159px;
-    margin-bottom: 20px;
     padding: 14px 72px;
   }
 }
 
-.hero__modal-title {
-  font-family: "Forum", cursive;
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 768px) {
-  .hero__modal-title {
-    font-size: 20px;
-  }
-}
-
-.hero__modal-input {
-  min-width: 600px;
-  min-height: 50px;
-  margin-bottom: 5px;
-  margin-top: 20px;
-  border: 1px solid #81637D;
-}
-@media screen and (max-width: 768px) {
-  .hero__modal-input {
-    min-width: 200px;
-    min-height: 30px;
-    margin-bottom: 5px;
-    margin-top: 10px;
-  }
-}
-
-.hero__modal-input:focus::-moz-placeholder {
-  opacity: 0;
-}
-
-.hero__modal-input:focus::placeholder {
-  opacity: 0;
-}
-
-.hero__modal-button {
-  padding: 18px 136px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-@media screen and (max-width: 768px) {
-  .hero__modal-button {
-    padding: 14px 72px;
-  }
-}
-
-.hero__modal_status {
-  font-family: inherit;
-}
-
-.hero__backdrop,
 .about__backdrop {
   position: fixed;
   top: 0;
@@ -351,7 +299,6 @@
   pointer-events: none;
 }
 
-.hero__modal,
 .about__modal {
   position: absolute;
   max-width: 700px;
@@ -364,7 +311,6 @@
   border-radius: 15px;
 }
 @media screen and (max-width: 768px) {
-  .hero__modal,
   .about__modal {
     min-width: 250px;
     padding: 20px 10px;
@@ -385,31 +331,26 @@ body.modal-show {
   top: 10%;
 }
 
-body.hero__modal-show .hero__backdrop,
 body.about__modal-show .about__backdrop {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
 }
 
-body.hero__modal-show .hero__modal,
 body.about__modal-show .about__modal {
   transform: scale(1);
 }
 
-.hero__close,
 .modal-about_close {
   text-align: right;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-  .hero__close,
   .modal-about_close {
     margin-bottom: 10px;
   }
 }
 
-.hero__close::before,
 .modal-about_close::before {
   content: "";
   display: inline-block;
@@ -423,7 +364,6 @@ body.about__modal-show .about__modal {
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 768px) {
-  .hero__close::before,
   .modal-about_close::before {
     width: 20px;
     height: 20px;

@@ -1,4 +1,3 @@
-.hero__backdrop,
 .about__backdrop {
     position: fixed;
     top: 0;
@@ -16,7 +15,6 @@
     pointer-events: none;
 }
 
-.hero__modal,
 .about__modal {
     position: absolute;
     max-width: 700px;
@@ -50,19 +48,16 @@ body.modal-show {
     top: 10%;
 }
 
-body.hero__modal-show .hero__backdrop,
 body.about__modal-show .about__backdrop {
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
 }
 
-body.hero__modal-show .hero__modal,
 body.about__modal-show .about__modal {
     transform: scale(1);
 }
 
-.hero__close,
 .modal-about_close {
     text-align: right;
     cursor: pointer;
@@ -72,7 +67,6 @@ body.about__modal-show .about__modal {
     }
 }
 
-.hero__close::before,
 .modal-about_close::before {
     content: "";
     display: inline-block;

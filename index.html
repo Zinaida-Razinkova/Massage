@@ -67,27 +67,10 @@
                 <h1 class="hero__title">ЗАДОВОЛЕННЯ ВІД МАСАЖУ</h1>
                 <p class="hero__text">Вся наша краса йде зсередини. Коли душа, розум і тіло перебувають у гармонії,
                     тільки <br> тоді ми стаємо по-справжньому гарними.</p>
-                <button class="button button-primary hero__button">ЗАПИСАТИСЯ</button>
+                <a href="#order" class="button button-primary hero__button">ЗАПИСАТИСЯ</a>
             </div>
         </section>
-        <div class="hero__backdrop">
-            <div class="hero__modal">
-                <div class="hero__close"></div>
-                <h2 class="hero__modal-title">ЗАПИСАТИСЯ НА МАСАЖ</h2>
-                <form id="modal-form" class="hero__modal-form" action="https://formspree.io/f/xzbyvrvz" method="POST">
-                    <input class="hero__modal-input input" type="text" name="name" placeholder="ВАШЕ ІМ'Я" required>
-                    <input class="hero__modal-input input" type="text" name="phone" placeholder="+380997770099"
-                        pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
-                        title="Номер телефону має складатися з 11-12 цифр і може містити цифри, пробіли, тире, пузаті дужки та може починатися з +"
-                        required>
-                    <input class="hero__modal-input input" type="text" name="massage" placeholder="ВИД МАСАЖУ">
-                    <input class="hero__modal-input input" type="text" name="date" placeholder="ДАТА І ЧАС">
-                    <button class="hero__modal-button button button-primary " type="submit"
-                        id="modal-button">ВІДПРАВИТИ</button>
-                    <p id="modal-status" class="hero__modal_status"></p>
-                </form>
-            </div>
-        </div>
+
                 <section id="services" class="services">
                     <div class="container">
                         <h2 class="services__title title title_accent">ВИДИ МАСАЖУ</h2>
@@ -398,13 +381,13 @@
             <div class="container">
                 <h2 class="order__title title">ЗАПИСАТИСЯ НА МАСАЖ</h2>
                 <form id="order-form" class="order__form form " action="https://formspree.io/f/mrgvzepn" method="POST">
-                    <input class="input form__input " type="text" name="name" placeholder="ВАШЕ ІМ'Я" required>
+                    <input class="input form__input " type="text" name="name" placeholder="Ваше ім'я" required>
                     <input class="input form__input " type="text" name="phone" placeholder="+380997770099"
                         pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
                         title="Номер телефону має складатися з 11-12 цифр і може містити цифри, пробіли, тире, пузаті дужки та може починатися з +"
                         required>
-                    <input class="input form__input" type="text" name="massage" placeholder="ВИД МАСАЖУ">
-                    <input class="input form__input" type="text" name="date" placeholder="ДАТА І ЧАС">
+                    <input class="input form__input" type="text" name="massage" placeholder="Вид масажу">
+                    <input class="input form__input" type="text" name="date" placeholder="Дата і час сеансу">
                     <button class="order__button button button-primary " type="submit">ВІДПРАВИТИ</button>
                     <p id="order-status" class="order__status"></p>
                 </form>
@@ -438,8 +421,6 @@
     </footer>
     <script src="./js/scrollup.js"></script>
     <script src="./js/about-modal.js"></script>
-    <script src="./js/hero-modal.js"></script>
-    <script src="./js/modal-form.js"></script>
     <script src="./js/order-form.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
